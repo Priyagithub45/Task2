@@ -1,0 +1,248 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c3e50;
+  color: white;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #1abc9c;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") 
+              center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 10%;
+}
+
+.about img {
+  width: 350px;
+  border-radius: 15px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  /* width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s; */
+   width: 100%;
+  height: 250px;        /* 👈 fixed uniform height */
+  object-fit: cover;    /* 👈 crop nicely without stretching */
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Blog Section */
+.blog {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.blog h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.post {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+}
+
+.post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post h3 {
+  margin: 15px;
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.post p {
+  margin: 0 15px 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+
+form button {
+  background: #1abc9c;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #16a085;
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
